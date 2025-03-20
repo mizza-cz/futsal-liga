@@ -1,0 +1,14 @@
+.badge-like {
+    width: 5rem;
+    height: 5rem;
+    top: 2rem;
+    left: 2rem;
+    background: image('like.svg') center bottom .9rem no-repeat;
+    background-size: 1rem 1rem;
+    letter-spacing: -0.1rem;
+}
+
+.badge-video {
+    right: 2rem;
+    top: 2rem;
+}

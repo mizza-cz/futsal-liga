@@ -1,0 +1,42 @@
+.slick-disabled {
+    opacity: 0;
+}
+
+.slick-dots {
+    @include media-breakpoint-up(lg) {
+        bottom: 4.38em;
+        right: 6em;
+    }
+
+    position: absolute;
+    right: 2em;
+    bottom: .5em;
+
+    > li {
+        float: left;
+    }
+
+    li + li {
+        margin-left: 0.25em;
+    }
+
+    button {
+        @include font-size($font-size-bigger);
+        border: 1px solid $color5;
+        background-color: $color4;
+        width: 0.88em;
+        height: 0.88em;
+        text-indent: 100%;
+        overflow: hidden;
+        border-radius: 50%;
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
+
+    .slick-active {
+        button {
+            background-color: $color2;
+        }
+    }
+}

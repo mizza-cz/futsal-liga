@@ -1,0 +1,10 @@
+.subfooter {
+  border-bottom: 1px solid $color6;
+}
+
+.subfooter-logo {
+  transform: translateY(-3rem);
+  object-fit: contain;
+  width: 15rem;
+  height: auto;
+}

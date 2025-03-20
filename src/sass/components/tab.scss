@@ -1,0 +1,41 @@
+.tab-group {
+    @include media-breakpoint-down(md) {
+        overflow-x: scroll;
+    }
+}
+
+.tab {
+    color: $color6;
+
+    &.is-active:after {
+        @include media-breakpoint-up(md) {
+            bottom: -.2rem;
+        }
+
+        content: "";
+        height: .4rem;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    &.text-orange.is-active:after {
+        background-color: $color7;
+    }
+
+    &.text-tertiary.is-active:after {
+        background-color: $color3;
+    }
+
+    &.text-secondary.is-active:after {
+        background-color: $color2;
+    }
+}
+
+.tab-ext {
+    &:after {
+        top: -.1rem;
+        bottom: inherit;
+    }
+}

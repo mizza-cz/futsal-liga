@@ -1,0 +1,39 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "jquery": true
+    },
+    "extends": "airbnb",
+    "rules": {
+        "indent": [
+            "error",
+            4
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "radix": [
+            "error",
+            "as-needed"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "no-param-reassign": [
+            "error",
+            { "props": false }
+        ],
+        "eol-last": 0,
+        "no-unused-vars": 1,
+        "comma-dangle": 0,
+        "func-names": 0,
+        "space-before-function-paren": 0
+    }
+}

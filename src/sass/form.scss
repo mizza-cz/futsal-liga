@@ -1,0 +1,108 @@
+.form-control {
+    @include media-breakpoint-up(lg) {
+        @include font-size($font-size-smaller);
+    }
+
+    @include font-size($font-size-normal);
+    @include Font1;
+    transition: all .3s ease;
+    padding: 1rem 2rem;
+    margin: 0;
+    height: 4.2rem;
+    border: 1px solid rgb(236, 236, 236);
+    background-color: $color5;
+    display: block;
+    width: 100%;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+
+    &::placeholder {
+        color: rgba($color1, .4);
+    }
+
+    &:focus {
+        border-color: $color1;
+    }
+}
+
+.form-checkbox,
+.form-radio {
+    position: absolute;
+    z-index: -1000;
+    left: -1000px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+.form-checkbox:hover {
+    curson: pointer;
+}
+
+.form-checkbox~span,
+.form-radio~span {
+    width: .9rem;
+    height: .9rem;
+    border: 1px solid rgb(227, 227, 227);
+    box-shadow: 0 2px 8px rgba(1, 1, 1, 0.05);
+    background-color: $color4;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    &:after {
+        transition: all .2s ease;
+        width: 50%;
+        height: 50%;
+        background-color: $color2;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        content: "";
+        opacity: 0;
+    }
+}
+
+.form-checkbox~span {
+    border-radius: 4px;
+}
+
+.form-checkbox:checked~span,
+.form-radio:checked~span {
+    &:after {
+        opacity: 1;
+    }
+}
+
+.form-radio~span {
+    border-radius: 50%;
+
+    &:after {
+        border-radius: 50%;
+    }
+}
+
+.checkbox,
+.radio {
+    label {
+        color: $color3;
+        position: relative;
+        padding-left: 1.6rem;
+    }
+}
+
+.form-note {
+    @include font-size($font-size-normal);
+    line-height: 1.43rem;
+}
+
+.form-error-msg {
+    @include font-size($font-size-smaller);
+    color: red;
+}

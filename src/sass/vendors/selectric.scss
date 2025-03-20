@@ -1,0 +1,44 @@
+.selectric {
+    @include border-radius();
+    border-color: $border-color;
+
+    .label {
+        @include font-size($font-size-bigger);
+        border-right: 1px solid $border-color;
+        margin-right: 0;
+        padding-right: 3.13em;
+    }
+
+    .button {
+        background-color: $color2;
+        color: $color4;
+    }
+}
+
+.selectric-items {
+    @include border-radius();
+
+    li {
+        @include font-size($font-size-bigger);
+
+        &.selected {
+            background-color: $color6;
+        }
+
+        &:hover {
+            background-color: darken($color6,5);
+        }
+
+    }
+}
+
+.selectric-hover .selectric,
+.selectric-focus .selectric {
+    border-color: $border-color;
+    
+    .button {
+        &:after {
+           border-top-color: $color4;
+        }
+    }
+}

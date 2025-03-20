@@ -1,0 +1,71 @@
+//Bootstrap
+@import '../../node_modules/bootstrap/scss/mixins';
+@import '../../node_modules/bootstrap/scss/functions';
+@import '../../node_modules/bootstrap/scss/variables';
+
+@import 'variables';
+
+@import '../../node_modules/bootstrap/scss/grid';
+@import '../../node_modules/bootstrap/scss/utilities';
+@import '../../node_modules/bootstrap/scss/images';
+@import '../../node_modules/bootstrap/scss/alert';
+
+@import 'reset';
+
+// General Dependencies
+@import 'mixins';
+
+// Base
+@import 'body';
+@import 'utilities/font';
+@import 'utilities/text';
+@import 'utilities/font';
+@import 'utilities/position';
+@import 'utilities/z-index', 'utilities/transition';
+@import 'utilities/opacity';
+
+// Areas
+@import 'header';
+@import 'footer';
+
+// Patterns
+@import 'typography';
+@import 'form';
+@import 'button';
+
+// Components
+@import 'components/menu';
+@import 'components/hr';
+@import 'components/lazy';
+@import 'components/cookie';
+@import 'components/accesibility';
+@import 'components/icon';
+@import 'components/wrapper';
+@import 'components/widget';
+@import 'components/secondary';
+@import 'components/overlay';
+@import 'components/shadow';
+@import 'components/badge';
+@import 'components/grid';
+@import 'components/subfooter';
+@import 'components/table';
+@import 'components/team';
+@import 'components/tab';
+@import 'components/logo';
+@import 'components/select';
+@import 'components/search';
+@import 'components/player';
+@import 'components/link';
+@import 'components/match';
+@import 'components/scoreboard';
+@import 'components/img';
+@import 'components/article';
+@import 'components/tooltip';
+@import 'components/social';
+@import 'components/gallery';
+@import 'components/select';
+@import 'components/stats';
+@import 'components/nr';
+@import 'components/counter';
+@import 'components/progress';
+@import 'components/modal';

@@ -1,0 +1,3 @@
+path="eihl/"
+
+rsync -chav -e "ssh -p 16715" --exclude /.git/ --exclude /.sass-cache/ --exclude /node_modules/ --exclude deploy --exclude .gitignore --exclude .eslintrc  --exclude .vscode --exclude .prettierignore --exclude /src/ --exclude package.json --exclude package.lock.json --exclude gulpfile.js ./ "uid164317@shellserver-2.websupport.sk:freshidea.sk/sub/$path"

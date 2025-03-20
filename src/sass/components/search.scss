@@ -1,0 +1,20 @@
+.search-wrapper {
+    @include media-breakpoint-up(md) {
+        position: relative;
+
+    }
+
+    @include media-breakpoint-down(sm) {
+        position: absolute;
+        top: 2.6rem;
+        right: 6rem;
+    }
+}
+
+.search-btn {
+    @include media-breakpoint-up(md) {
+        top: 1.2rem;
+        right: 1.7rem;
+        position: absolute;
+    }
+}

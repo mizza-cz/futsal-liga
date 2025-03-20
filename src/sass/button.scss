@@ -1,0 +1,77 @@
+.btn {
+    @include Font1;
+    @include font-size($font-size-small);
+
+    transition: 0.3s all ease;
+    text-decoration: none;
+    padding: 0 4rem;
+    margin: 0;
+    background: none;
+    border-radius: 0.6rem;
+    display: inline-block;
+    height: 4.2rem;
+    color: $color4;
+    font-weight: $font-bold;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    border: 0;
+
+    .icon,
+    .icon-ext {
+        fill: $color4;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+@each $color, $value in $theme-colors {
+    .btn-#{$color} {
+        background-color: $value;
+        color: $color4;
+
+        &:hover {
+            @include media-breakpoint-up(lg) {
+                background-color: darken($value, 10);
+
+                .icon,
+                .icon-ext {
+                    fill: $color4;
+                }
+            }
+
+            color: $color4;
+        }
+    }
+}
+
+@each $color, $value in $theme-colors {
+    .btn-outline-#{$color} {
+        .icon,
+        .icon-ext {
+            fill: $value;
+        }
+
+        &:hover {
+            @include media-breakpoint-up(lg) {
+                .icon,
+                .icon-ext {
+                    fill: $color4;
+                }
+            }
+        }
+    }
+}
+
+.btn-link,
+.btn-text {
+    background: none;
+    border: 0;
+}
+
+.btn-link {
+    &:hover {
+        cursor: pointer;
+    }
+}

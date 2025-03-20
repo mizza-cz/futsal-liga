@@ -1,0 +1,19 @@
+.lazy {
+    transition: blur .3s ease-out;
+    filter: blur(8px);
+}
+
+.lazy.loaded {
+    filter: blur(0);
+}
+
+.lazy-wrapper-1-1 {
+    padding-bottom: 100%;
+    background-color: gray;
+
+    img {position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;}
+}

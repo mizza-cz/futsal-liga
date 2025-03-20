@@ -1,0 +1,13 @@
+.overlay {
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 40%;
+        display: block;
+        z-index: 0;
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+}

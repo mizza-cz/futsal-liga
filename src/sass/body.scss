@@ -1,0 +1,14 @@
+body {
+    background: $color5;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    height: auto;
+
+    &.overflow {
+        overflow: hidden;
+        height: 100%;
+    }
+}

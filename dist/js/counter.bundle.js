@@ -1,0 +1,1 @@
+"use strict";(function(){var a=document.querySelectorAll(".js-counter");a.forEach(function init(a){var b=a.getTotalLength();a.style.strokeDasharray=b;var c=b-a.dataset.value/100*b;a.style.strokeDashoffset=c})})();

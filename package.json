@@ -1,0 +1,37 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "author": "Tibor Pino <tibor.pino@freshidea.sk>",
+  "dependencies": {
+    "fontfaceobserver": "^2.1.0",
+    "fslightbox": "^2.0.1",
+    "siema": "^1.5.1",
+    "vanilla-lazyload": "^11"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "autoprefixer": "^9.4.7",
+    "babel-preset-minify": "^0.5.0",
+    "bootstrap": "^4",
+    "browser-sync": "^2.26.3",
+    "cache": "^2.1.0",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-cache": "^1.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-kit-2": "^0.2.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.1.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-svgmin": "^2.1.0",
+    "gulp-svgstore": "^7.0.1",
+    "imagemin": "^6.1.0",
+    "path": "^0.12.7",
+    "postcss-uncss": "^0.16.1",
+    "sass": "^1.86.0",
+    "uncss": "^0.16.2"
+  }
+}

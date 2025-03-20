@@ -1,0 +1,17 @@
+$positions: left right top bottom;
+
+@each $position in $positions {
+    .position-#{$position} {
+        #{$position}: 0;
+    }
+}
+
+.position-center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.position-fixed {
+    position: fixed;
+}

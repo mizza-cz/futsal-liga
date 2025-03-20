@@ -1,0 +1,22 @@
+@each $color,
+$value in $theme-colors {
+    .text-#{$color} {
+        fill: $value !important;
+    }
+
+    a.text-#{$color}:hover {
+        color: $value !important;
+    }
+}
+
+.text-transformation-none {
+    text-transform: none !important;
+}
+
+.text-underline {
+    text-decoration: underline;
+}
+
+.text-height-1.text-height-1 {
+    line-height: 1;
+}

@@ -1,0 +1,5 @@
+.secondary {
+    @include media-breakpoint-up(lg) {
+        // border-left: 1px solid $border-color;
+    }
+}

@@ -1,0 +1,24 @@
+.match-score {
+    @include Font2;
+    @include font-size(72px);
+    font-weight: 900;
+    line-height: 1;
+}
+
+.match-score-summary {
+    tbody {
+
+        td,
+        th {
+            padding: .5rem;
+        }
+    }
+
+    tr:last-child {
+
+        td,
+        th {
+            border-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.tooltip {
+    position: relative;
+
+    &:hover {
+        &:after {
+            animation: showTooltip .3s ease forwards;
+            display: block;
+        }
+    }
+
+    &:after {
+        @include font-size(10px);
+        transition: .2s opacity ease;
+        opacity: 0;
+        position: absolute;
+        content: attr(data-title);
+        background-color: rgba($color1, .8);
+        color: $color4;
+        border-radius: 1.5rem;
+        padding: .5rem 1rem;
+        left: 50%;
+        bottom: 120%;
+        transform: translateX(-50%);
+        z-index: 5;
+        display: none;
+    }
+}
+
+@keyframes showTooltip {
+    0% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

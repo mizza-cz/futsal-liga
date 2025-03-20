@@ -1,0 +1,19 @@
+.main-header {
+  background: $futsalColor;
+  @include media-breakpoint-up(md) {
+    padding-top: 1.7rem;
+  }
+
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  .search-wrapper {
+    @include media-breakpoint-up(lg) {
+      max-width: 320px;
+      min-width: 320px;
+    }
+  }
+}
+
+.main-header-title.main-header-title {
+  @include font-size(28px);
+}

@@ -1,0 +1,55 @@
+/* class applies to select element itself, not a wrapper element */
+.select-css {
+    @include media-breakpoint-up(lg) {
+        @include font-size($font-size-smaller);
+    }
+
+    @include font-size($font-size-normal);
+    @include Font1;
+    transition: .3s all ease;
+    display: block;
+    font-weight: 400;
+    color: $color1;
+    height: 4.2rem;
+    line-height: 1.3;
+    padding: 0 5rem 0 2rem;
+    width: 100%;
+    max-width: 100%;
+    /* useful when width is set to anything other than 100% */
+    box-sizing: border-box;
+    margin: 0;
+    border: 1px solid rgb(236, 236, 236);
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: $color5;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgMTAgNiI+PGc+PGc+PHBhdGggZD0iTTkuODIgMS41MjlhLjQ2My40NjMgMCAwIDAgMC0uNjhsLS43MTQtLjY4YS41Mi41MiAwIDAgMC0uNzEzIDBMNSAzLjQ0NyAxLjU3Ny4xNDJhLjUyMi41MjIgMCAwIDAtLjcxNSAwbC0uNzE1LjY4YS40NjYuNDY2IDAgMCAwIDAgLjY4bDQuNDk0IDQuMzI3YS41MjYuNTI2IDAgMCAwIC43MTUgMHoiLz48L2c+PC9nPjwvc3ZnPg==);
+    background-repeat: no-repeat,
+    repeat;
+    /* arrow icon position (1em from the right, 50% vertical) , then gradient position*/
+    background-position: right .7em top 50%,
+    0 0;
+    /* icon size, then gradient */
+    background-size: 1rem 0.6rem;
+}
+
+/* Hide arrow icon in IE browsers */
+.select-css::-ms-expand {
+    display: none;
+}
+
+/* Hover style */
+.select-css:hover {
+    border-color: $color1;
+}
+
+/* Focus style */
+.select-css:focus {
+    border-color: $color1;
+    outline: none;
+}
+
+/* Set options to normal weight */
+.select-css option {
+    font-weight: normal;
+}

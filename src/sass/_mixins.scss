@@ -1,0 +1,39 @@
+/* [] FONT FUNCTIONS */
+@mixin Font1 {
+    font-family: $font-family-primary;
+}
+
+@mixin Font2 {
+    font-family: $font-family-secondary;
+}
+
+// Function for converting a px based font-size to rem.
+@function calculate-rem($size) {
+    $remSize: $size / 10px;
+    //Default font size on html element is 100%, equivalent to 16px;
+    @return #{$remSize}rem;
+}
+
+// Mixin that will include the fall back px declaration as well as the calculated rem value.
+@mixin font-size($size) {
+    font-size: $size;
+    font-size: calculate-rem($size);
+}
+
+
+/// Asset URL builder
+/// @access private
+/// @param {String} $type - Asset type, matching folder name
+/// @param {String} $file - Asset file name, including extension
+/// @return {URL} - A `url()` function leading to the asset
+@function asset($type, $file) {
+    @return url($asset-base-path + '/' + $type + '/' + $file);
+}
+
+@function image($file) {
+    @return asset('images', $file);
+}
+
+@function font($file) {
+    @return asset('fonts', $file);
+}

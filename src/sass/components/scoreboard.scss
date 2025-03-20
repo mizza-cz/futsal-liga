@@ -1,0 +1,30 @@
+.scoreboard {
+  @include media-breakpoint-up(lg) {
+    margin-left: 12rem;
+    margin-right: 12rem;
+  }
+
+  overflow-x: scroll;
+  height: 7rem;
+}
+
+.scoreboard-item {
+  flex: 0 0 24rem;
+  height: 7rem;
+  background-color: $futsalOrange;
+  border-top-width: 2px !important;
+}
+
+.scoreboard-item-even {
+  background-color: rgba(#ec604c, 0.82);
+}
+
+.scoreboard-control {
+  width: 12rem;
+  height: 7rem;
+  background-color: $color5;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

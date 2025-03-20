@@ -1,0 +1,20 @@
+@each $color,
+$value in $brand-color {
+    .social-#{$color} {
+        color: $value;
+
+        svg {
+            fill: $value;
+        }
+
+        &:hover {
+            @include media-breakpoint-up(lg) {
+                color: darken($value, 10);
+
+                svg {
+                    fill: darken($value, 10);
+                }
+            }
+        }
+    }
+}

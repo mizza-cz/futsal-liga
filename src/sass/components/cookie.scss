@@ -1,0 +1,56 @@
+.cookie-modal {
+    @include media-breakpoint-up(md) {
+        right: 2em;
+        bottom: 2em;
+        left: inherit;
+        padding: 1em;
+        max-width: 20em;
+    }
+
+    right: .5em;
+    bottom: .5em;
+    left: .5em;
+    transition: all .3s ease-in-out;
+    position: fixed;
+    background-color: $color4;
+    padding: .5em;
+    transform: translate(100%,0);
+    opacity: 0;
+    box-shadow: 0 0 1em rgba($color1,.4);
+    will-change: auto;
+
+    &.is-active {
+        opacity: 1;
+        transform: translate(0,0);
+    }
+}
+
+.cookie-text {
+    @include font-size($font-size-small);
+
+    @include media-breakpoint-up(md) {
+        @include font-size($font-size-smaller);
+    }
+
+    line-height: 1.5em;
+    margin-bottom: 1em;
+}
+
+.cookie-btn {
+    @include font-size($font-size-smaller);
+    padding: .5em 1em;
+    background-color: $color2;
+    border: 0;
+
+    &, &:visited, &:active, &:focus {
+        color: $color4;
+    }
+
+    &:hover {
+        @include media-breakpoint-up(lg) {
+            background-color: darken($color2,10);
+        }
+
+        color: $color4;
+    }
+}

@@ -1,0 +1,15 @@
+.article-title {
+    @include media-breakpoint-up(md) {
+        @include font-size($alfa);
+    }
+
+    @include media-breakpoint-up(lg) {
+        @include font-size($gamma);
+    }
+
+    @include media-breakpoint-up(xl) {
+        @include font-size($alfa);
+    }
+
+    @include font-size($delta);
+}
