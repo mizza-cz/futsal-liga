@@ -140,5 +140,14 @@ body.user-is-tabbing *:focus {
 }
 .object-content {
   object-fit: contain;
- 
+}
+
+.gap-2 {
+  gap: 8px;
+}
+.mt-1 {
+  margin-top: 4px;
+}
+.ml-auto {
+  margin-left: auto !important;
 }

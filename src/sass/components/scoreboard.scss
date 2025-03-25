@@ -5,12 +5,12 @@
   }
 
   overflow-x: scroll;
-  height: 7rem;
+  height: 9rem;
 }
 
 .scoreboard-item {
   flex: 0 0 24rem;
-  height: 7rem;
+  height: 9rem;
   background-color: $futsalOrange;
   border-top-width: 2px !important;
 }
@@ -27,4 +27,13 @@
   &:hover {
     cursor: pointer;
   }
+}
+
+.scoreboard-item-online {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: 2rem !important;
 }
