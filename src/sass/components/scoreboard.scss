@@ -1,24 +1,32 @@
 .scoreboard {
+  border-left: 1px solid #fff !important;
   @include media-breakpoint-up(lg) {
     margin-left: 4rem;
     margin-right: 4rem;
   }
 
   overflow-x: scroll;
-  height: 9rem;
+  height: 12rem;
+}
+.gamma {
+  margin-bottom: 0;
 }
 
 .scoreboard-item {
   flex: 0 0 24rem;
-  height: 9rem;
+  height: 12rem;
   background-color: $futsalOrange;
   border-top-width: 2px !important;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  border-right: 1px solid #fff !important;
 }
 
 .scoreboard-control {
   width: 4rem;
   height: 4rem;
-  align-self: anchor-center;
+
   background-color: $color5;
   top: 50%;
   transform: translateY(-50%);
@@ -32,4 +40,21 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.scoreboard-item__content {
+  position: relative;
+  &-info {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    position: relative;
+  }
+}
+.scoreboard-item--live {
+  position: absolute;
+  top: -16px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: fit-content;
 }

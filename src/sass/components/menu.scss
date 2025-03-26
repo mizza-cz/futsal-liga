@@ -1,18 +1,19 @@
 /* [] MENU */
 .menu-item-group {
   display: flex;
-  gap: 16px;
+  gap: 32px;
   padding-bottom: 8px;
   @include media-breakpoint-down(sm) {
     padding: 10rem 0 4rem;
     flex-wrap: wrap;
+    gap: 20px;
   }
 }
 
 .menu-logo {
   @include media-breakpoint-up(md) {
-    width: 15rem;
-    min-width: 15rem;
+    width: 12rem;
+    min-width: 12rem;
   }
 
   width: 10rem;
@@ -31,8 +32,8 @@
 
 .menu-link {
   width: fit-content;
-  max-width: 110px;
-  height: 34px;
+  max-width: 120px;
+  height: 26px;
   @include media-breakpoint-up(md) {
     @include font-size($font-size-smaller);
     color: $color4;
@@ -125,7 +126,7 @@
 
 .menu-link--logo {
   @include media-breakpoint-down(sm) {
-    height: 80px;
+    height: 60px;
   }
   img {
     width: 100%;

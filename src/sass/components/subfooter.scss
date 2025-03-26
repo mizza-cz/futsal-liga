@@ -1,10 +1,30 @@
 .subfooter {
   border-bottom: 1px solid $color6;
+  margin-top: 24px;
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    padding: 16px 0;
+  }
 }
 
 .subfooter-logo {
-  transform: translateY(-3rem);
   object-fit: contain;
   width: 15rem;
   height: auto;
+  margin: 0 auto;
+}
+
+.subfooter__link {
+  height: 32px;
+  width: fit-content;
+  max-width: 120px;
+  display: block;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 }
