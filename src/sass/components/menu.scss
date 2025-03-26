@@ -1,5 +1,8 @@
 /* [] MENU */
 .menu-item-group {
+  display: flex;
+  gap: 16px;
+  padding-bottom: 8px;
   @include media-breakpoint-down(sm) {
     padding: 10rem 0 4rem;
   }
@@ -24,6 +27,8 @@
 }
 
 .menu-link {
+  width: auto;
+  height: 34px;
   @include media-breakpoint-up(md) {
     @include font-size($font-size-smaller);
     color: $color4;
@@ -112,7 +117,9 @@
 }
 
 .menu-link--logo {
-  height: 80px;
+  @include media-breakpoint-down(sm) {
+    height: 80px;
+  }
   img {
     width: 100%;
     height: 100%;
