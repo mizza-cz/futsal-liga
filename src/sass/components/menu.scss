@@ -5,15 +5,18 @@
   padding-bottom: 8px;
   @include media-breakpoint-down(sm) {
     padding: 10rem 0 4rem;
+    flex-wrap: wrap;
   }
 }
 
 .menu-logo {
   @include media-breakpoint-up(md) {
     width: 15rem;
+    min-width: 15rem;
   }
 
   width: 10rem;
+  min-width: 10rem;
 }
 
 .menu-item {
@@ -27,7 +30,8 @@
 }
 
 .menu-link {
-  width: auto;
+  width: fit-content;
+  max-width: 110px;
   height: 34px;
   @include media-breakpoint-up(md) {
     @include font-size($font-size-smaller);
@@ -45,6 +49,9 @@
 
     color: $color4;
     text-decoration: none;
+  }
+  img {
+    width: auto !important;
   }
 }
 
