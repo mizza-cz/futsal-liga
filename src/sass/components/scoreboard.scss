@@ -20,7 +20,8 @@
   height: 4rem;
   align-self: anchor-center;
   background-color: $color5;
-
+  top: 50%;
+  transform: translateY(-50%);
   &:hover {
     cursor: pointer;
   }
