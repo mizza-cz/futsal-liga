@@ -31,9 +31,10 @@
 }
 
 .menu-link {
+  height: 32px;
   width: fit-content;
   max-width: 120px;
-  height: 26px;
+  display: block;
   @include media-breakpoint-up(md) {
     @include font-size($font-size-smaller);
     color: $color4;
