@@ -44,6 +44,8 @@
 }
 .scoreboard-item__content {
   position: relative;
+  margin: 0 auto;
+
   &-info {
     display: flex;
     gap: 20px;
@@ -58,6 +60,4 @@
   right: 0;
   margin: 0 auto;
   width: fit-content;
-
-  display: none;
 }
