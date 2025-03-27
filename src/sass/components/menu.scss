@@ -1,8 +1,10 @@
 /* [] MENU */
 .menu-item-group {
   display: flex;
-  gap: 32px;
+  gap: 48px;
   padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
   @include media-breakpoint-down(sm) {
     padding: 10rem 0 4rem;
     flex-wrap: wrap;
