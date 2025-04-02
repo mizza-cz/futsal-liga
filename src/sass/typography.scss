@@ -81,6 +81,7 @@ h6,
 
 h1,
 .alfa {
+  font-weight: 700;
   @include font-size($beta);
   margin-bottom: 3rem;
 
@@ -91,6 +92,7 @@ h1,
 
 h2,
 .beta {
+  font-weight: 700;
   @include font-size($gamma);
   text-transform: uppercase;
 
@@ -101,6 +103,7 @@ h2,
 
 h3,
 .gamma {
+  font-weight: 700;
   @include font-size($delta);
   text-transform: uppercase;
 
@@ -111,6 +114,7 @@ h3,
 
 h4,
 .delta {
+  font-weight: 700;
   @include font-size($epsilon);
 
   @include media-breakpoint-up(md) {
