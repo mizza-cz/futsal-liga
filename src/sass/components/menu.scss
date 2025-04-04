@@ -49,7 +49,7 @@
   &:hover,
   &:focus {
     @include media-breakpoint-up(md) {
-      color: $color2;
+      color: #ec604c;
     }
 
     color: $color4;

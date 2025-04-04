@@ -1,12 +1,12 @@
 window.addEventListener('DOMContentLoaded', () => {
-  const header = $('.main-header');
-  const html = $('html');
-  const body = $('body');
-  const collapse = $('.menu-collapse');
-  const toggle = $('.menu-icon-label');
-  const closeBtn = $('.menu-close-btn');
-  const links = $$('.menu-link');
-  const lastSubmenuLinks = $$('.submenu-item:last-child a');
+  const header = document.querySelector('.main-header');
+  const html = document.documentElement;
+  const body = document.body;
+  const collapse = document.querySelector('.menu-collapse');
+  const toggle = document.querySelector('.menu-icon-label');
+  const closeBtn = document.querySelector('.menu-close-btn');
+  const links = document.querySelectorAll('.menu-link');
+  const submenuLinks = document.querySelectorAll('.menu-item > .menu-link');
 
   const classNames = {
     active: 'is-active',
@@ -14,75 +14,63 @@ window.addEventListener('DOMContentLoaded', () => {
     open: 'is-open',
   };
 
-  /**
-   * Otvori menu
-   */
-  const open = () => {
-    toggle.classList.add(classNames.active);
-    toggle.setAttribute('aria-expanded', true);
-    collapse.classList.add(classNames.active);
-    html.classList.add(classNames.overflow);
-    body.classList.add(classNames.overflow);
-    header.classList.add(classNames.open);
-  };
-
-  /**
-   *   Zavrie menu
-   */
-  const close = () => {
-    toggle.classList.remove(classNames.active);
-    toggle.setAttribute('aria-expanded', false);
-    collapse.classList.remove(classNames.active);
-    html.classList.remove(classNames.overflow);
-    body.classList.remove(classNames.overflow);
-    header.classList.remove(classNames.open);
-  };
-
-  /**
-   *   Handle click na ikonku menu
-   */
-  const handleClick = (e) => {
-    // zistime ci je menu otvorene alebo zatvorene
-    const isOpened = toggle.getAttribute('aria-expanded') === 'true' ? true : false;
-    // menu je zatvorene, otvorime ho
-    if (!isOpened) {
-      open();
-      return;
+  const openMenu = () => {
+    if (toggle) {
+      toggle.classList.add(classNames.active);
+      toggle.setAttribute('aria-expanded', 'true');
     }
-    // menu je otvorene, zatvorime ho
-    close();
+    if (collapse) collapse.classList.add(classNames.active);
+    if (html) html.classList.add(classNames.overflow);
+    if (body) body.classList.add(classNames.overflow);
+    if (header) header.classList.add(classNames.open);
   };
 
-  /**
-   *   Zavrie otvorene submenu
-   */
-  const closeOpenedSubmenu = () => {
-    // zavrieme otvorene submenu
-    const openedSubmenu = $('.submenu.is-active');
-    if (openedSubmenu) openedSubmenu.classList.remove('is-active');
-    // zavrieme otvorene menu
-    const openedMenu = $('.menu-link[aria-expanded="true"]');
-    if (openedMenu) openedMenu.setAttribute('aria-expanded', false);
+  const closeMenu = () => {
+    if (toggle) {
+      toggle.classList.remove(classNames.active);
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+    if (collapse) collapse.classList.remove(classNames.active);
+    if (html) html.classList.remove(classNames.overflow);
+    if (body) body.classList.remove(classNames.overflow);
+    if (header) header.classList.remove(classNames.open);
   };
 
-  /**
-   *   Obsluzi focus na menu link
-   */
-  const handleFocus = (e) => {
-    closeOpenedSubmenu();
-    // ziskame menu link
+  const handleMenuToggle = (e) => {
+    e.preventDefault();
+    const isOpened = toggle && toggle.getAttribute('aria-expanded') === 'true';
+    if (isOpened) closeMenu();
+    else openMenu();
+  };
+
+  const handleSubmenuToggle = (e) => {
+    e.preventDefault();
     const link = e.currentTarget;
-    // otvorime menu link
-    link.setAttribute('aria-expanded', true);
-    // ziskame submenu
-    const submenu = link.parentNode.querySelector('.submenu');
-    // otvorime submenu
-    submenu.classList.add('is-active');
+    const submenu = link.nextElementSibling;
+
+    if (submenu && submenu.classList.contains('submenu')) {
+      const isOpened = link.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.submenu.is-active').forEach((openSubmenu) => {
+        openSubmenu.classList.remove('is-active');
+      });
+      document.querySelectorAll('.menu-link[aria-expanded="true"]').forEach((openLink) => {
+        openLink.setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpened) {
+        link.setAttribute('aria-expanded', 'true');
+        submenu.classList.add('is-active');
+      }
+    }
   };
 
-  // Event handlers na menu link
-  links.on('focus', handleFocus);
-  lastSubmenuLinks.on('blur', closeOpenedSubmenu);
-  toggle.on('click', handleClick);
-  closeBtn.on('click', close);
+  const handleClickOutside = (e) => {
+    if (collapse && toggle && !collapse.contains(e.target) && !toggle.contains(e.target)) {
+      closeMenu();
+    }
+  };
+
+  if (toggle) toggle.addEventListener('click', handleMenuToggle);
+  if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+  submenuLinks.forEach((link) => link.addEventListener('click', handleSubmenuToggle));
+  document.addEventListener('click', handleClickOutside);
 });
