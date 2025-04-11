@@ -321,8 +321,8 @@ function w(a){return new n(function(b,c){function d(c){return function(d){h[c]=d
                     </div>
                     <div class="tab-group d-flex justify-content-md-center mt-4">
                         <a href="https://mizza-cz.github.io/futsal-liga/dist/team.html" class="tab text-nowrap position-relative text-uppercase font-size-smaller font-weight-bold d-block pl-1 pr-1 pb-3">SOUPISKA</a>
-                        <a href="https://mizza-cz.github.io/futsal-liga/dist/team-matches.html" class="tab text-nowrap position-relative text-uppercase font-size-smaller font-weight-bold d-block pl-1 pr-1 pb-3 ml-3 ml-md-4">ROZPIS ZÁPASŮ</a>
-                        <a href="https://mizza-cz.github.io/futsal-liga/dist/team-stats.html" class="tab text-nowrap position-relative text-uppercase font-size-smaller font-weight-bold d-block pl-1 pr-1 pb-3 ml-3 ml-md-4 text-orange is-active">TÝMOVÉ STATISTIKY</a>
+                        <a href="https://mizza-cz.github.io/futsal-liga/dist/team-matches.html" class="tab text-nowrap position-relative text-uppercase font-size-smaller font-weight-bold d-block pl-1 pr-1 pb-3 ml-3 ml-md-4 text-orange is-active">ROZPIS ZÁPASŮ</a>
+                        <a href="https://mizza-cz.github.io/futsal-liga/dist/team-stats.html" class="tab text-nowrap position-relative text-uppercase font-size-smaller font-weight-bold d-block pl-1 pr-1 pb-3 ml-3 ml-md-4 ">TÝMOVÉ STATISTIKY</a>
                         <a href="https://mizza-cz.github.io/futsal-liga/dist/team-players.html" class="tab text-nowrap position-relative text-uppercase font-size-smaller font-weight-bold d-block pl-1 pr-1 pb-3 ml-3 ml-md-4"> HRÁČSKÉ STATISTIKY</a>
                         <a href="" class="tab text-nowrap position-relative text-uppercase font-size-smaller font-weight-bold d-block pl-1 pr-1 pb-3 ml-3 ml-md-4">O KLUBU</a>
                         <a href="" class="tab text-nowrap position-relative text-uppercase font-size-smaller font-weight-bold d-block pl-1 pr-1 pb-3 ml-3 ml-md-4">DOMÁCÍ HALA</a>
@@ -332,86 +332,204 @@ function w(a){return new n(function(b,c){function d(c){return function(d){h[c]=d
                 <div class="container-fluid">
                     <div class="pt-5 pt-lg-4 pb-lg-4">
                         <div class="row justify-content-between">
-                            <div class="col-12 col-lg-7">
-                                <h2 class="delta pl-3 pl-lg-6"><svg class="icon mr-3 text-orange" width="13" height="13"><use xlink:href="#star"></use></svg>TÝMOVÉ STATISTIKY  </h2>
+                            <div class="col-12 col-lg-8">
+                                <h2 class="delta pl-3 pl-lg-6"><svg class="icon mr-3 text-orange" width="13" height="13"><use xlink:href="#star"></use></svg>ROZPIS ZÁPASŮ</h2>
                             </div>
-                            <div class="col-12 col-lg-5 d-flex justify-content-lg-end">
-                                
-                                <select name="id_stage" id="id_stage" class="js-select-redirect select-css w-auto mr-3" aria-label="Season year">
-                                    <option value="/team/5-cardiff-devils/team-stats?id_season=41&id_stage=1" selected>  sezóna</option>
-                                </select>
+                            <div class="col-12 col-lg-4 d-flex justify-content-lg-end">
 
-                                <select name="id_season" id="id_season" class="js-select-redirect select-css w-auto" aria-label="sezóna 2024/2025">
-                                    <option value="/team/5-cardiff-devils/team-stats?id_season=41" selected>sezóna 2024/2025</option>
-                                   <option value="/team/5-cardiff-devils/team-stats?id_season=41" selected>sezóna 2024/2025</option>
-                                    <option value="/team/5-cardiff-devils/team-stats?id_season=41" selected>sezóna 2024/2025</option>
+                                <select name="id_season" id="id_season" class="js-select-redirect select-css w-auto mr-3" aria-label="Season year">
+                                    <option value="" selected>Čtvrtfinále 1</option>
+                                     <option value="" selected>Čtvrtfinále 2</option>
+                                      <option value="" selected>Čtvrtfinále 3</option>
+                                   
                                 </select>
                             </div>
                         </div>
-
-                        <div class="row justify-content-start pl-lg-4 pr-lg-4">
-    
-                            <div class="col-6 col-md-4 col-lg-2 mt-4 text-center">
-                                <div class="beta font-primary mb-0">54</div>
-                                <div class="text-gray font-size-bigger">Odehrané zápasy  </div>
-                            </div>
-
-                            <div class="col-6 col-md-4 col-lg-2 mt-4 text-center">
-                                <div class="beta font-primary mb-0">29</div>
-                                <div class="text-gray font-size-bigger">Výhry</div>
-                            </div>
-                              <div class="col-6 col-md-4 col-lg-2 mt-4 text-center">
-                                <div class="beta font-primary mb-0">4</div>
-                                <div class="text-gray font-size-bigger"> Remízy </div>
-                            </div>
-
-                            <div class="col-6 col-md-4 col-lg-2 mt-4 text-center">
-                                <div class="beta font-primary mb-0">18</div>
-                                <div class="text-gray font-size-bigger">Prohry</div>
-                            </div>
-
-                            <div class="col-6 col-md-4 col-lg-2 mt-4 text-center">
-                                <div class="beta font-primary mb-0">3</div>
-                                <div class="text-gray font-size-bigger">Body  </div>
-                            </div>
-
-                           
-
-                            <div class="col-6 col-md-4 col-lg-2 mt-4 text-center">
-                                <div class="beta font-primary mb-0">0.630</div>
-                                <div class="text-gray font-size-bigger">Výhry %</div>
-                            </div>
-
-                            <div class="col-6 col-md-4 col-lg-2 mt-4 text-center">
-                                <div class="beta font-primary mb-0">68</div>
-                                <div class="text-gray font-size-bigger">Vstřelené góly</div>
-                            </div>
-
-                            <div class="col-6 col-md-4 col-lg-2 mt-4 text-center">
-                                <div class="beta font-primary mb-0">178</div>
-                                <div class="text-gray font-size-bigger"> Inkasované góly  </div>
-                            </div>
-
-                            <div class="col-6 col-md-4 col-lg-2 mt-4 text-center">
-                                <div class="beta font-primary mb-0">143</div>
-                                <div class="text-gray font-size-bigger"> Průměr vstřelených gólů  </div>
-                            </div>
-
-                            <div class="col-6 col-md-4 col-lg-2 mt-4 text-center">
-                                <div class="beta font-primary mb-0">3.30</div>
-                                <div class="text-gray font-size-bigger"> Průměr inkasovaných gólů     </div>
-                            </div>
-
-                             
-
-                            
-
-
-                            
-
+                         <div class="container-fluid text-center text-md-left">
+                    <h2 class="delta mt-4 ml-lg-4 border-bottom border-bcolor pb-3 mb-0"><svg class="icon mr-3 text-tertiary d-none d-md-inline-block" width="13" height="13"><use xlink:href="#star"></use></svg>pondělí 20.8.2025</h2>
+                    <div class="row align-items-center pt-3 pb-3 border-bottom border-bcolor">
+                        <div class="col-12 col-md-2 col-lg-2 mb-2 mb-md-0">
+                            <div class="delta mb-0 pl-md-3 pl-lg-8">16:00</div>
                         </div>
-
-                       
+                        <div class="col-12 col-md-2 col-lg-2 mb-2 mb-md-0">
+                            <div class="font-size-small">
+                                261
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-5 d-flex justify-content-center justify-content-md-start align-items-center font-secondary">
+                            Bohemians Praha 1905
+                            <img data-src="images/content/1.png" data-srcset="images/content/1.png 2x" width="20" class="lazy js-lazy ml-2 d-none d-lg-block" alt="">
+                            <div class="delta mb-0 ml-2 mr-2">3:2</div>
+                            <img data-src="images/content/2.png " data-srcset="images/content/2.png  2x" width="20" class="lazy js-lazy mr-2 d-none d-lg-block" alt="">
+                            Bohemians Praha 1905
+                        </div>
+                        <div class="col-12 col-md-2 col-lg-2 text-center">
+                            <a href="" class="font-size-small font-weight-bold">Kompletní náhled<svg class="icon ml-2" width="10" height="15"><use xlink:href="#angle-right"></use></svg></a>
+                        </div>
+                    </div>
+                      <div class="row align-items-center pt-3 pb-3 border-bottom border-bcolor">
+                        <div class="col-12 col-md-2 col-lg-2 mb-2 mb-md-0">
+                            <div class="delta mb-0 pl-md-3 pl-lg-8">16:00</div>
+                        </div>
+                        <div class="col-12 col-md-2 col-lg-2 mb-2 mb-md-0">
+                            <div class="font-size-small">
+                                261
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-5 d-flex justify-content-center justify-content-md-start align-items-center font-secondary">
+                            Bohemians Praha 1905
+                            <img data-src="images/content/3.png" data-srcset="images/content/3.png 2x" width="20" class="lazy js-lazy ml-2 d-none d-lg-block" alt="">
+                            <div class="delta mb-0 ml-2 mr-2">3:2</div>
+                            <img data-src="images/content/4.png " data-srcset="images/content/4.png  2x" width="20" class="lazy js-lazy mr-2 d-none d-lg-block" alt="">
+                           FK Chrudim
+                        </div>
+                        <div class="col-12 col-md-2 col-lg-2 text-center">
+                            <a href="" class="font-size-small font-weight-bold">Kompletní náhled<svg class="icon ml-2" width="10" height="15"><use xlink:href="#angle-right"></use></svg></a>
+                        </div>
+                    </div>
+                      <div class="row align-items-center pt-3 pb-3 border-bottom border-bcolor">
+                        <div class="col-12 col-md-2 col-lg-2 mb-2 mb-md-0">
+                            <div class="delta mb-0 pl-md-3 pl-lg-8">16:00</div>
+                        </div>
+                        <div class="col-12 col-md-2 col-lg-2 mb-2 mb-md-0">
+                            <div class="font-size-small">
+                                261
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-5 d-flex justify-content-center justify-content-md-start align-items-center font-secondary">
+                           SK Slavia Praha
+                            <img data-src="images/content/4.png" data-srcset="images/content/4.png 2x" width="20" class="lazy js-lazy ml-2 d-none d-lg-block" alt="">
+                            <div class="delta mb-0 ml-2 mr-2">3:2</div>
+                            <img data-src="images/content/5.png " data-srcset="images/content/5.png  2x" width="20" class="lazy js-lazy mr-2 d-none d-lg-block" alt="">
+                            FTZS Liberec
+                        </div>
+                        <div class="col-12 col-md-2 col-lg-2 text-center">
+                            <a href="" class="font-size-small font-weight-bold">Kompletní náhled<svg class="icon ml-2" width="10" height="15"><use xlink:href="#angle-right"></use></svg></a>
+                        </div>
+                    </div>
+                    <h2 class="delta mt-4 ml-lg-4 border-bottom border-bcolor pb-3 mb-0 mt-6"><svg class="icon mr-3 text-tertiary d-none d-md-inline-block" width="13" height="13"><use xlink:href="#star"></use></svg>úterý 20.8.2025</h2>
+                      <div class="row align-items-center pt-3 pb-3 border-bottom border-bcolor">
+                        <div class="col-12 col-md-2 col-lg-2 mb-2 mb-md-0">
+                            <div class="delta mb-0 pl-md-3 pl-lg-8">16:00</div>
+                        </div>
+                        <div class="col-12 col-md-2 col-lg-2 mb-2 mb-md-0">
+                            <div class="font-size-small">
+                                261
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-5 d-flex justify-content-center justify-content-md-start align-items-center font-secondary">
+                            Bohemians Praha 1905
+                            <img data-src="images/content/1.png" data-srcset="images/content/1.png 2x" width="20" class="lazy js-lazy ml-2 d-none d-lg-block" alt="">
+                            <div class="delta mb-0 ml-2 mr-2">3:2</div>
+                            <img data-src="images/content/2.png " data-srcset="images/content/2.png  2x" width="20" class="lazy js-lazy mr-2 d-none d-lg-block" alt="">
+                            Bohemians Praha 1905
+                        </div>
+                        <div class="col-12 col-md-2 col-lg-2 text-center">
+                            <a href="" class="font-size-small font-weight-bold">Kompletní náhled<svg class="icon ml-2" width="10" height="15"><use xlink:href="#angle-right"></use></svg></a>
+                        </div>
+                    </div>
+                      <div class="row align-items-center pt-3 pb-3 border-bottom border-bcolor">
+                        <div class="col-12 col-md-2 col-lg-2 mb-2 mb-md-0">
+                            <div class="delta mb-0 pl-md-3 pl-lg-8">16:00</div>
+                        </div>
+                        <div class="col-12 col-md-2 col-lg-2 mb-2 mb-md-0">
+                            <div class="font-size-small">
+                                261
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-5 d-flex justify-content-center justify-content-md-start align-items-center font-secondary">
+                            Bohemians Praha 1905
+                            <img data-src="images/content/3.png" data-srcset="images/content/3.png 2x" width="20" class="lazy js-lazy ml-2 d-none d-lg-block" alt="">
+                            <div class="delta mb-0 ml-2 mr-2">3:2</div>
+                            <img data-src="images/content/4.png " data-srcset="images/content/4.png  2x" width="20" class="lazy js-lazy mr-2 d-none d-lg-block" alt="">
+                           FK Chrudim
+                        </div>
+                        <div class="col-12 col-md-2 col-lg-2 text-center">
+                            <a href="" class="font-size-small font-weight-bold">Kompletní náhled<svg class="icon ml-2" width="10" height="15"><use xlink:href="#angle-right"></use></svg></a>
+                        </div>
+                    </div>
+                      <div class="row align-items-center pt-3 pb-3 border-bottom border-bcolor">
+                        <div class="col-12 col-md-2 col-lg-2 mb-2 mb-md-0">
+                            <div class="delta mb-0 pl-md-3 pl-lg-8">16:00</div>
+                        </div>
+                        <div class="col-12 col-md-2 col-lg-2 mb-2 mb-md-0">
+                            <div class="font-size-small">
+                                261
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-5 d-flex justify-content-center justify-content-md-start align-items-center font-secondary">
+                           SK Slavia Praha
+                            <img data-src="images/content/4.png" data-srcset="images/content/4.png 2x" width="20" class="lazy js-lazy ml-2 d-none d-lg-block" alt="">
+                            <div class="delta mb-0 ml-2 mr-2">3:2</div>
+                            <img data-src="images/content/5.png " data-srcset="images/content/5.png  2x" width="20" class="lazy js-lazy mr-2 d-none d-lg-block" alt="">
+                            FTZS Liberec
+                        </div>
+                        <div class="col-12 col-md-2 col-lg-2 text-center">
+                            <a href="" class="font-size-small font-weight-bold">Kompletní náhled<svg class="icon ml-2" width="10" height="15"><use xlink:href="#angle-right"></use></svg></a>
+                        </div>
+                    </div>
+                    <h2 class="delta mt-4 ml-lg-4 border-bottom border-bcolor pb-3 mb-0 mt-6"><svg class="icon mr-3 text-tertiary d-none d-md-inline-block" width="13" height="13"><use xlink:href="#star"></use></svg>pátek 20.8.2025</h2>
+                      <div class="row align-items-center pt-3 pb-3 border-bottom border-bcolor">
+                        <div class="col-12 col-md-2 col-lg-2 mb-2 mb-md-0">
+                            <div class="delta mb-0 pl-md-3 pl-lg-8">16:00</div>
+                        </div>
+                        <div class="col-12 col-md-2 col-lg-2 mb-2 mb-md-0">
+                            <div class="font-size-small">
+                                261
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-5 d-flex justify-content-center justify-content-md-start align-items-center font-secondary">
+                            Bohemians Praha 1905
+                            <img data-src="images/content/1.png" data-srcset="images/content/1.png 2x" width="20" class="lazy js-lazy ml-2 d-none d-lg-block" alt="">
+                            <div class="delta mb-0 ml-2 mr-2">3:2</div>
+                            <img data-src="images/content/2.png " data-srcset="images/content/2.png  2x" width="20" class="lazy js-lazy mr-2 d-none d-lg-block" alt="">
+                            Bohemians Praha 1905
+                        </div>
+                        <div class="col-12 col-md-2 col-lg-2 text-center">
+                            <a href="" class="font-size-small font-weight-bold">Kompletní náhled<svg class="icon ml-2" width="10" height="15"><use xlink:href="#angle-right"></use></svg></a>
+                        </div>
+                    </div>
+                      <div class="row align-items-center pt-3 pb-3 border-bottom border-bcolor">
+                        <div class="col-12 col-md-2 col-lg-2 mb-2 mb-md-0">
+                            <div class="delta mb-0 pl-md-3 pl-lg-8">16:00</div>
+                        </div>
+                        <div class="col-12 col-md-2 col-lg-2 mb-2 mb-md-0">
+                            <div class="font-size-small">
+                                261
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-5 d-flex justify-content-center justify-content-md-start align-items-center font-secondary">
+                            Bohemians Praha 1905
+                            <img data-src="images/content/3.png" data-srcset="images/content/3.png 2x" width="20" class="lazy js-lazy ml-2 d-none d-lg-block" alt="">
+                            <div class="delta mb-0 ml-2 mr-2">3:2</div>
+                            <img data-src="images/content/4.png " data-srcset="images/content/4.png  2x" width="20" class="lazy js-lazy mr-2 d-none d-lg-block" alt="">
+                           FK Chrudim
+                        </div>
+                        <div class="col-12 col-md-2 col-lg-2 text-center">
+                            <a href="" class="font-size-small font-weight-bold">Kompletní náhled<svg class="icon ml-2" width="10" height="15"><use xlink:href="#angle-right"></use></svg></a>
+                        </div>
+                    </div>
+                      <div class="row align-items-center pt-3 pb-3 border-bottom border-bcolor">
+                        <div class="col-12 col-md-2 col-lg-2 mb-2 mb-md-0">
+                            <div class="delta mb-0 pl-md-3 pl-lg-8">16:00</div>
+                        </div>
+                        <div class="col-12 col-md-2 col-lg-2 mb-2 mb-md-0">
+                            <div class="font-size-small">
+                                261
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-5 d-flex justify-content-center justify-content-md-start align-items-center font-secondary">
+                           SK Slavia Praha
+                            <img data-src="images/content/4.png" data-srcset="images/content/4.png 2x" width="20" class="lazy js-lazy ml-2 d-none d-lg-block" alt="">
+                            <div class="delta mb-0 ml-2 mr-2">3:2</div>
+                            <img data-src="images/content/5.png " data-srcset="images/content/5.png  2x" width="20" class="lazy js-lazy mr-2 d-none d-lg-block" alt="">
+                            FTZS Liberec
+                        </div>
+                        <div class="col-12 col-md-2 col-lg-2 text-center">
+                            <a href="" class="font-size-small font-weight-bold">Kompletní náhled<svg class="icon ml-2" width="10" height="15"><use xlink:href="#angle-right"></use></svg></a>
+                        </div>
+                    </div>
+                </div>
                     </div>
                 </div>
             </article>
