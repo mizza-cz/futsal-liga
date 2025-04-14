@@ -1,24 +1,53 @@
 .match-score {
-    @include Font2;
-    @include font-size(72px);
-    font-weight: 900;
-    line-height: 1;
+  @include Font2;
+  @include font-size(72px);
+  font-weight: 900;
+  line-height: 1;
 }
 
 .match-score-summary {
-    tbody {
-
-        td,
-        th {
-            padding: .5rem;
-        }
+  tbody {
+    td,
+    th {
+      padding: 0.5rem;
     }
+  }
 
-    tr:last-child {
-
-        td,
-        th {
-            border-bottom: 0;
-        }
+  tr:last-child {
+    td,
+    th {
+      border-bottom: 0;
     }
+  }
+}
+.match-team {
+  display: flex;
+  align-items: center;
+  max-width: 220px;
+  width: 100%;
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+    gap: 12px;
+  }
+  img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    @include media-breakpoint-down(sm) {
+      margin: 0 !important;
+    }
+  }
+  &:first-child {
+    justify-content: flex-end;
+    min-width: 220px;
+    @include media-breakpoint-down(sm) {
+      min-width: auto;
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+.match-results {
+  min-width: 44px;
+  text-align: center;
 }
