@@ -155,3 +155,28 @@ body.user-is-tabbing *:focus {
   margin-left: auto;
   margin-right: auto;
 }
+
+.order-lg-3 {
+  @include media-breakpoint-up(lg) {
+    order: 3;
+  }
+}
+.order-lg-4 {
+  @include media-breakpoint-up(lg) {
+    order: 4;
+  }
+}
+
+.order-lg-1 {
+  @include media-breakpoint-up(lg) {
+    order: 1;
+  }
+}
+.order-lg-2 {
+  @include media-breakpoint-up(lg) {
+    order: 2;
+  }
+}
+.object-fit-contain {
+  object-fit: contain;
+}

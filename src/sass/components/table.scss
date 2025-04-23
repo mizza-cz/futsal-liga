@@ -1,76 +1,85 @@
 /* [] TABLE */
 .table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 
-    caption {
-        padding: 1.5rem;
-        background-color: $border-color;
+  caption {
+    padding: 1.5rem;
+    background-color: $border-color;
+  }
+
+  th,
+  td {
+    @include font-size($font-size-smaller);
+    line-height: 1.3;
+  }
+
+  thead {
+    th {
+      font-weight: $font-bold;
+      padding: 1.5rem 2rem;
+      text-align: left;
     }
+  }
 
-    th,
+  tbody {
     td {
-        @include font-size($font-size-smaller);
-        line-height: 1.3;
-
+      padding: 1.5rem 2rem;
     }
-
-    thead {
-        th {
-            font-weight: $font-bold;
-            padding: 1.5rem 2rem;
-            text-align: left;
-        }
-    }
-
-    tbody {
-        td {
-            padding: 1.5rem 2rem;
-        }
-    }
+  }
 }
 
 .table-bordered {
-
-    td,
-    th {
-        border-bottom: 1px solid $border-color;
-    }
+  td,
+  th {
+    border-bottom: 1px solid $border-color;
+  }
 }
 
 .table-striped {
-    tbody {
-        tr {
-            background: $color1;
+  tbody {
+    tr {
+      background: $color1;
 
-            &:nth-child(even) {
-                background: $color1;
-            }
+      &:nth-child(even) {
+        background: $color1;
+      }
 
-            &:hover {
-                background: rgba($color1, .2);
-            }
-        }
+      &:hover {
+        background: rgba($color1, 0.2);
+      }
     }
+  }
 }
 
 .table-condensed {
-    tbody {
-        td {
-            padding: 1rem;
-        }
+  tbody {
+    td {
+      padding: 1rem;
     }
+  }
 
-    thead {
-        th {
-            padding: .36em;
-        }
+  thead {
+    th {
+      padding: 0.36em;
     }
+  }
 }
 
 .table-responsive {
-    @include media-breakpoint-down(md) {
-        width: 100%;
-        overflow: scroll;
-    }
+  @include media-breakpoint-down(md) {
+    width: 100%;
+    overflow: scroll;
+  }
+}
+
+.standingsTable {
+  td:nth-child(2),
+  th:nth-child(2) {
+    white-space: nowrap;
+  }
+  th:first-child,
+  td:first-child {
+    width: 40px;
+  }
 }
