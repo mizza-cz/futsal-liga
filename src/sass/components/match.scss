@@ -53,7 +53,7 @@
 }
 
 .match-list-left {
-  @include media-breakpoint-down(lg) {
+  @include media-breakpoint-down(md) {
     position: relative;
     &::before {
       content: '';
@@ -67,7 +67,7 @@
 }
 
 .match-list {
-  @include media-breakpoint-down(lg) {
+  @include media-breakpoint-down(md) {
     padding: 0 12px;
   }
 }
