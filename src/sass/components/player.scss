@@ -1,3 +1,10 @@
 .player-name {
     line-height: 1;
 }
+.player-avatar {
+  object-fit: cover;
+  object-position: top;
+  width: 48px;
+  height: 48px;
+}
+ 

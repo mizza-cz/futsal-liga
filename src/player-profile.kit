@@ -8,22 +8,24 @@
             <article class="">
                 <div class="bg-gray-light border-bottom border-bcolor pl-3 pr-3 pt-3 pt-lg-4">
                     <div class="row">
-                        <div class="col-3 col-md-auto mb-3 mb-lg-0">
-                            <img src="images/content/5.png" srcset="images/content/5.png 2x" width="120" height="120" alt="" class="img-fluid rounded-circle">
-                        </div>
-                        <div class="col-9 col-lg-4">
+                        <div class="col-9 col-lg-6">
                             <h1 class="player-name text-uppercase mb-2 mb-md-0 font-weight-normal"><span class="font-size-big">John</span><br>Dunbar</h1>
-                            <div class="font-secondary font-size-bigger d-flex align-items-center mt-2"><img src="http://satyr.io/24x24" srcset="http://satyr.io/48x48" width="24" height="24" alt="" class="d-block mr-2 mb-1">Guildford Flames</div>
+                            <div class="font-secondary font-size-bigger d-flex align-items-center mt-2"><img class="player-avatar mr-2 rounded-circle" src="images/content/player.png" srcset="images/content/player.png" width="24" height="24" alt="" class="d-block mr-2 mb-1">Guildford Flames</div>
                         </div>
                         <div class="col-12 col-lg-6 typography mt-4 mb-4 mt-lg-0 mb-lg-0">
-                            <div class="mb-4">útočník
-                            <span class="ml-2 mr-2 text-gray">|</span>
-                            9.5.1988
-                            <span class="ml-2 mr-2 text-gray">|</span>21 let</div>
+                            <div class="mb-4 d-flex align-items-center">
+                                útočník
+                                <span class="ml-2 mr-2 text-gray">|</span>
+                                9.5.1988
+                                <span class="ml-2 mr-2 text-gray">|</span>
+                                21 let
+                                <span class="ml-2 mr-2 text-gray">|</span>
+                                <img src="images/content/cz.png" srcset="images/content/cz.png" width="20" height="20" alt="" class="">
+                            </div>
                             <div class="d-flex flex-wrap">
                                 <div class="mr-3 mr-xl-6 mb-3">
                                     <div class="beta font-primary mb-0">88</div>
-                                    <div class="text-gray font-size-bigger">Číslo</div>
+                                    <div class="text-gray font-size-bigger">Zápasy</div>
                                 </div>
                                 <div class="mr-3 mr-xl-6 mb-3">
                                     <div class="beta font-primary mb-0">88</div>
@@ -39,11 +41,11 @@
                                 </div>
                                 <div class="mr-3 mr-xl-6 mb-3">
                                     <div class="beta font-primary mb-0">88</div>
-                                    <div class="text-gray font-size-bigger">TM</div>
+                                    <div class="text-gray font-size-bigger">ŽK</div>
                                 </div>
                                 <div class="mr-3 mr-xl-6 mb-3">
                                     <div class="beta font-primary mb-0">88</div>
-                                    <div class="text-gray font-size-bigger">Národnost</div>
+                                    <div class="text-gray font-size-bigger">ČK</div>
                                 </div>
                             </div>
                         </div>
@@ -52,32 +54,7 @@
                         <a href="https://mizza-cz.github.io/futsal-liga/dist/player-profile.html" class="tab text-nowrap position-relative text-uppercase font-size-smaller font-weight-bold d-block pl-1 pr-1 pb-3 ml-3 ml-md-4 text-secondary is-active">STATISTIKY</a>
                         <a href="https://mizza-cz.github.io/futsal-liga/dist/player-news.html" class="tab text-nowrap position-relative text-uppercase font-size-smaller font-weight-bold d-block pl-1 pr-1 pb-3 ml-3 ml-md-4">Aktuality</a>
                     </div>
-                    <div class="table-responsive">
-                        <table class="table table-bordered">
-                            <thead>
-                                <th>Sezóna</th>
-                                <th>Tým</th>
-                                <th>G</th>
-                                <th>p</th>
-                                <th>a</th>
-                                <th>pm</th>
-                                <th>+-</th>
-                                <th>%</th>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>2018/2019</td>
-                                    <td>Guildfor Flames</td>
-                                    <td>4</td>
-                                    <td>32</td>
-                                    <td>24</td>
-                                    <td>8</td>
-                                    <td>+5</td>
-                                    <td>95%</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    
                 </div>
                 <div class="container-fluid">
                     <div class="pt-5 pt-lg-4 pb-lg-4">
@@ -88,12 +65,12 @@
                                     <tr>
                                         <th>Posledních 5 zápasů</th>
                                         <th>Tým</th>
+                                        <th>Z</th>
                                         <th>G</th>
-                                        <th>p</th>
-                                        <th>a</th>
-                                        <th>pm</th>
-                                        <th>+-</th>
-                                        <th>%</th>
+                                        <th>A</th>
+                                        <th>B</th>
+                                        <th>ŽK</th>
+                                        <th>ČK</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -130,6 +107,32 @@
                                 </tbody>
                             </table>
                         </div>
+                    </div>
+                     <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <th>Sezóna</th>
+                                <th>Tým</th>
+                                <th>Z</th>
+                                <th>G</th>
+                                <th>A</th>
+                                <th>B</th>
+                                <th>ŽK</th>
+                                <th>ČK</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2018/2019</td>
+                                    <td>Guildfor Flames</td>
+                                    <td>4</td>
+                                    <td>32</td>
+                                    <td>24</td>
+                                    <td>8</td>
+                                    <td>+5</td>
+                                    <td>95%</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </article>
