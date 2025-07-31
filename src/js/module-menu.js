@@ -5,6 +5,8 @@ window.addEventListener('DOMContentLoaded', () => {
   const collapse = document.querySelector('.menu-collapse');
   const toggle = document.querySelector('.menu-icon-label');
   const closeBtn = document.querySelector('.menu-close-btn');
+  const links = document.querySelectorAll('.menu-link');
+  const submenuLinks = document.querySelectorAll('.menu-item > .menu-link');
 
   const classNames = {
     active: 'is-active',
@@ -41,6 +43,28 @@ window.addEventListener('DOMContentLoaded', () => {
     else openMenu();
   };
 
+  const handleSubmenuToggle = (e) => {
+    const link = e.currentTarget;
+    const submenu = link.nextElementSibling;
+
+    if (submenu && submenu.classList.contains('submenu')) {
+      e.preventDefault(); // Предотвращаем переход только если есть подменю
+      const isOpened = link.getAttribute('aria-expanded') === 'true';
+
+      document.querySelectorAll('.submenu.is-active').forEach((openSubmenu) => {
+        openSubmenu.classList.remove('is-active');
+      });
+      document.querySelectorAll('.menu-link[aria-expanded="true"]').forEach((openLink) => {
+        openLink.setAttribute('aria-expanded', 'false');
+      });
+
+      if (!isOpened) {
+        link.setAttribute('aria-expanded', 'true');
+        submenu.classList.add('is-active');
+      }
+    }
+  };
+
   const handleClickOutside = (e) => {
     if (collapse && toggle && !collapse.contains(e.target) && !toggle.contains(e.target)) {
       closeMenu();
@@ -49,5 +73,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
   if (toggle) toggle.addEventListener('click', handleMenuToggle);
   if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+  submenuLinks.forEach((link) => {
+    const submenu = link.nextElementSibling;
+    if (submenu && submenu.classList.contains('submenu')) {
+      link.setAttribute('aria-expanded', 'false'); // начальное состояние
+    }
+    link.addEventListener('click', handleSubmenuToggle);
+  });
   document.addEventListener('click', handleClickOutside);
 });
