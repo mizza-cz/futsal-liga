@@ -61,6 +61,7 @@
   }
 }
 .match-place {
+  text-align: center;
   @include media-breakpoint-down(sm) {
     width: 100%;
   }
