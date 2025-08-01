@@ -31,10 +31,12 @@
   @include media-breakpoint-down(sm) {
     flex-direction: column;
     gap: 12px;
+    max-width: 140px;
+    text-align: center !important;
   }
   img {
-    width: 20px;
-    height: 20px;
+    width: 48px;
+    height: 48px;
     object-fit: contain;
     @include media-breakpoint-down(sm) {
       margin: 0 !important;
@@ -43,10 +45,24 @@
   &:first-child {
     justify-content: flex-end;
     min-width: 220px;
+    text-align: right;
+    margin-right: 12px;
     @include media-breakpoint-down(sm) {
       min-width: auto;
       flex-direction: column-reverse;
+      margin-right: 0;
     }
+  }
+  &:last-child {
+    margin-left: 12px;
+    @include media-breakpoint-down(sm) {
+      margin-left: 0;
+    }
+  }
+}
+.match-place {
+  @include media-breakpoint-down(sm) {
+    width: 100%;
   }
 }
 
