@@ -1,10 +1,11 @@
-.calendar-table {
+.calendar-table.table {
   td,
   th {
     border: 1px solid #e9ecef;
     font-size: 1.6rem;
     padding: 1rem 0.7rem;
     line-height: 1.3;
+    min-width: 17rem;
   }
   th {
     background-color: #e9ecef;
